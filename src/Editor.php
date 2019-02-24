@@ -52,7 +52,6 @@ class Editor extends Base {
 			'kirki-control-editor',
 			"$url/assets/scripts/control.js",
 			[
-				'kirki-script',
 				'jquery',
 				'customize-base',
 				'kirki-dynamic-control',
