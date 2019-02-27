@@ -14,3 +14,5 @@ add_action(
         class_alias( 'Kirki\Control\Editor', 'Kirki_Control_Editor' );
     }
 );
+
+class_alias( 'Kirki\Field\Editor', 'Kirki_Field_Editor' );
