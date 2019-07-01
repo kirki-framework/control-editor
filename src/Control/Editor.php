@@ -48,7 +48,7 @@ class Editor extends Base {
 	 * @since 1.0
 	 * @var bool
 	 */
-	public $media_buttons = true;
+	public $choices = array();
 
 	/**
 	 * Enqueue control related scripts/styles.
@@ -67,7 +67,6 @@ class Editor extends Base {
 		wp_enqueue_style( 'kirki-control-editor-style', URL::get_from_path( dirname( __DIR__ ) . '/assets/styles/style.css' ), [], self::$control_ver );
 	}
 
-
 	/**
 	 * Refresh the parameters passed to the JavaScript via JSON.
 	 *
@@ -77,7 +76,7 @@ class Editor extends Base {
 	 */
 	public function to_json() {
 		parent::to_json();
-		$this->json['mediaButtons'] = $this->media_buttons;
+		$this->json['choices'] = $this->choices;
 	}
 
 	/**
